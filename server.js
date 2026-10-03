@@ -28,7 +28,7 @@ app.use(express.json());
 
 app.use("/api/users", usersRoutes);
 
-app.use("/api/students", studentRoutes);
+
 //protection des routes
 app.use(authMiddleware);
 //les routes protege
