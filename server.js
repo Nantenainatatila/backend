@@ -27,12 +27,12 @@ app.use(cors());
 app.use(express.json());
 
 app.use("/api/users", usersRoutes);
-app.use("/api/students", studentRoutes);
+
 
 //protection des routes
 app.use(authMiddleware);
 //les routes protege
-
+app.use("/api/students", studentRoutes);
 app.use("/api/mentions", mentionRoutes);
 app.use("/api/niveaux", niveauRoutes);
 app.use("/api/annees", anneeRoutes);
